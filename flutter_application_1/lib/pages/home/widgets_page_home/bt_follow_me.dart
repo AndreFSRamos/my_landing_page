@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_web_libraries_in_flutter
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/useful/app_strings.dart';
 import 'dart:html' as html;
 
 import 'package:google_fonts/google_fonts.dart';
@@ -20,9 +21,8 @@ class ButtomFollowMe extends StatelessWidget {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
             onPressed: () {
-              html.window.open(
-                  'https://www.linkedin.com/in/andr%C3%A9-ramos-763a4a139/',
-                  'Perfil Linkedin');
+              html.window.open(AppValues.linkBtFollowMe,
+                  AppValues.descriptionLinkBtFollowMe);
             },
             color: Colors.transparent,
             child: Padding(
@@ -33,10 +33,10 @@ class ButtomFollowMe extends StatelessWidget {
                   SizedBox(
                     height: 50,
                     width: 50,
-                    child: Image.asset('images/icon_in.png'),
+                    child: Image.asset(AppValues.iconIn),
                   ),
                   Text(
-                    'Follow me',
+                    AppValues.btFollowMe,
                     style: GoogleFonts.roboto(
                         fontSize: 20,
                         fontWeight: FontWeight.w900,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/useful/app_strings.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SubTitlePage extends StatelessWidget {
@@ -7,7 +8,7 @@ class SubTitlePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      'Full Stack Developer Jr',
+      AppValues.subTitleHome,
       style: GoogleFonts.roboto(
         fontSize: 30,
         fontWeight: FontWeight.w400,

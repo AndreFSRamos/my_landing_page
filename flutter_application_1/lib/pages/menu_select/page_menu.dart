@@ -1,8 +1,8 @@
 // ignore_for_file: deprecated_member_use, avoid_web_libraries_in_flutter
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/menu_select/widgets_menu/body.dart';
 import 'package:flutter_application_1/pages/menu_select/widgets_menu/header.dart';
+import 'package:flutter_application_1/pages/useful/app_strings.dart';
 
 class PageMenu extends StatefulWidget {
   const PageMenu({Key? key}) : super(key: key);
@@ -12,13 +12,14 @@ class PageMenu extends StatefulWidget {
 }
 
 class _PageMenu extends State<PageMenu> {
-  int pageInicial = 0;
+  int pageInicial = AppValues.intialPageIndex;
   late PageController controllerPage;
 
   _setPage(int indexPage) {
     setState(() {
       controllerPage.animateToPage(indexPage,
-          duration: const Duration(milliseconds: 500), curve: Curves.ease);
+          duration: Duration(milliseconds: AppValues.durationTransition),
+          curve: Curves.ease);
     });
   }
 
@@ -29,11 +30,12 @@ class _PageMenu extends State<PageMenu> {
       body: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
+            color: Colors.white,
+            /*decoration: BoxDecoration(
               image: DecorationImage(
-                  image: Image.asset('images/background.jpg').image,
+                  image: Image.asset(AppValues.imageBackground).image,
                   fit: BoxFit.cover),
-            ),
+            ),*/
             child: Stack(
               alignment: Alignment.topCenter,
               children: [

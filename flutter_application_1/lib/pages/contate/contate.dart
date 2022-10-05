@@ -11,7 +11,8 @@ class Contate extends StatelessWidget {
     return Center(
       child: Stack(
         children: [
-          SizedBox(
+          Container(
+            color: Colors.black,
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             child: Stack(

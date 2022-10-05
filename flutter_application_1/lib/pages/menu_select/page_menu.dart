@@ -28,31 +28,19 @@ class _PageMenu extends State<PageMenu> {
     controllerPage = PageController(initialPage: pageInicial);
     return Scaffold(
       body: Stack(
+        alignment: Alignment.topCenter,
         children: [
-          Container(
-            color: Colors.white,
-            /*decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: Image.asset(AppValues.imageBackground).image,
-                  fit: BoxFit.cover),
-            ),*/
-            child: Stack(
-              alignment: Alignment.topCenter,
-              children: [
-                Column(
-                  children: [
-                    BodyHome(controllerPage: controllerPage),
-                  ],
-                ),
-                SizedBox(
-                  height: 90,
-                  child: Header(
-                    setPage: _setPage,
-                  ),
-                )
-              ],
-            ),
+          Column(
+            children: [
+              BodyHome(controllerPage: controllerPage),
+            ],
           ),
+          SizedBox(
+            height: 90,
+            child: Header(
+              setPage: _setPage,
+            ),
+          )
         ],
       ),
     );

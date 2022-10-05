@@ -22,7 +22,8 @@ class AppValues {
   static String descriptionLinkBtWhatsapp = "Link para o meu contato whatssapp";
 
   //path assets.
-  static String imageBackground = "images/background.jpg";
+  static String imageBackground = "images/florestVetorBlack.jpg";
+  static String imagePerfil = "images/perfil10.png";
   static String iconIn = "images/icon_in.png";
   static String iconGitHub = "images/icon_gitHub.png";
   static String iconFacebook = "images/icon_facebook.png";

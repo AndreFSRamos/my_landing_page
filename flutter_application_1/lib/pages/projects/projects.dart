@@ -5,8 +5,22 @@ class Projects extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      //    color: Colors.blue,
+    return Container(
+      /*decoration: BoxDecoration(
+        /* image: DecorationImage(
+                image: Image.asset(AppValues.imageBackground).image,
+                fit: BoxFit.cover),*/
+        gradient: LinearGradient(
+          begin: Alignment.bottomRight,
+          end: Alignment.topLeft,
+          colors: [
+            Colors.grey,
+            Colors.black,
+          ],
+        ),
+      ),*/
+
+      color: Colors.black,
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
       child: const Center(child: Text('tela 02')),

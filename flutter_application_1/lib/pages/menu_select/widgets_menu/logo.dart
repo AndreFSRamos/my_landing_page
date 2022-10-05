@@ -9,7 +9,17 @@ class Logo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       AppValues.logo,
-      style: GoogleFonts.rubikGlitch(fontSize: 60, color: Colors.black),
+      style: GoogleFonts.rubikGlitch(
+          fontSize: 60,
+          color: const Color.fromARGB(255, 243, 86, 86),
+          shadows: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 5,
+              blurRadius: 3,
+              offset: const Offset(0, 3),
+            ),
+          ]),
     );
   }
 }

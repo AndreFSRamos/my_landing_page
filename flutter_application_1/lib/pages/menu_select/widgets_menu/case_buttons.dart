@@ -18,16 +18,32 @@ class CaseButtonsHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        TextButton(
-          onPressed: () {
-            setPage(index);
-          },
-          child: Text(
-            text,
-            style: GoogleFonts.rubikGlitch(
-              fontSize: 26,
-              fontWeight: FontWeight.w400,
-              color: Colors.black,
+        Container(
+          height: 40,
+          width: 180,
+          decoration: BoxDecoration(boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.1),
+              spreadRadius: 0,
+              blurRadius: 20,
+              offset: const Offset(0, 2), // changes position of shadow
+            )
+          ]),
+          child: RaisedButton(
+            onPressed: () {
+              setPage(index);
+            },
+            color: const Color.fromARGB(255, 36, 36, 36),
+            hoverColor: const Color.fromARGB(255, 243, 86, 86),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+            child: Text(
+              text,
+              style: GoogleFonts.rubikGlitch(
+                fontSize: 20,
+                fontWeight: FontWeight.w400,
+                color: Colors.white,
+              ),
             ),
           ),
         ),

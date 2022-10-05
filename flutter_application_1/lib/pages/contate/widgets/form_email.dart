@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 
 class FormEmail extends StatelessWidget {
@@ -9,7 +11,7 @@ class FormEmail extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(left: 50),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             TextFormField(
@@ -37,12 +39,13 @@ class FormEmail extends StatelessWidget {
             TextFormField(
               maxLines: 15,
               decoration: const InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(10),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
+                    ),
                   ),
-                ),
-              ),
+                  focusColor: Colors.red,
+                  hoverColor: Colors.red),
             ),
             const SizedBox(height: 10),
             SizedBox(

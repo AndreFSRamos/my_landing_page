@@ -7,32 +7,42 @@ import 'package:flutter_application_1/pages/home/widgets_page_home/description.d
 import 'package:flutter_application_1/pages/home/widgets_page_home/sub_title.dart';
 import 'package:flutter_application_1/pages/home/widgets_page_home/title.dart';
 
+import '../useful/app_strings.dart';
+
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
+    return Stack(
       children: [
         Container(
-          width: MediaQuery.of(context).size.width * 0.55,
-          padding: const EdgeInsets.only(left: 100),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
-              TitlePage(),
-              SizedBox(height: 5),
-              SubTitlePage(),
-              SizedBox(height: 30),
-              DescriptionPage(),
-              SizedBox(height: 50),
-              ButtomFollowMe(),
-            ],
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: Image.asset(AppValues.imageBackground).image,
+              fit: BoxFit.cover,
+            ),
           ),
         ),
-        const AvatarAnimation(),
+        Center(
+          child: Container(
+            width: MediaQuery.of(context).size.width * 0.4,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: const [
+                SizedBox(height: 30),
+                // AvatarAnimation(),
+                TitlePage(),
+                SizedBox(height: 5),
+                SubTitlePage(),
+                SizedBox(height: 30),
+                DescriptionPage(),
+                SizedBox(height: 50),
+                ButtomFollowMe(),
+              ],
+            ),
+          ),
+        ),
       ],
     );
   }

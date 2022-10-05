@@ -10,7 +10,7 @@ class BasePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black87,
+      color: Colors.grey[900],
       height: MediaQuery.of(context).size.height * 0.1,
       child: Padding(
         padding: const EdgeInsets.only(right: 150, left: 50),
@@ -22,6 +22,7 @@ class BasePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 _email(),
+                const SizedBox(height: 10),
                 _phoneNumber(),
               ],
             ),

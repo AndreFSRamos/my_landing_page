@@ -9,17 +9,18 @@ class SubTitlePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       AppValues.subTitleHome,
+      textAlign: TextAlign.justify,
       style: GoogleFonts.roboto(
         fontSize: 30,
-        fontWeight: FontWeight.w800,
+        fontWeight: FontWeight.w600,
         color: AppValues.treeColor,
         shadows: [
           BoxShadow(
-            color: AppValues.secondColor,
-            spreadRadius: 5,
-            blurRadius: 5,
+            color: AppValues.primaryColor,
+            spreadRadius: 1,
+            blurRadius: 1,
             blurStyle: BlurStyle.solid,
-            offset: const Offset(0, 0),
+            offset: const Offset(2, 2),
           ),
         ],
       ),

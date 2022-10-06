@@ -11,12 +11,20 @@ class DescriptionPage extends StatelessWidget {
       padding: const EdgeInsets.only(left: 10),
       child: Text(
         AppValues.descriptionHome,
-        style: GoogleFonts.gruppo(
-          fontSize: 30,
-          fontWeight: FontWeight.w900,
-          color: AppValues.treeColor,
-        ),
-        textAlign: TextAlign.justify,
+        style: GoogleFonts.robotoMono(
+            fontSize: 20,
+            fontWeight: FontWeight.w600,
+            color: AppValues.treeColor,
+            shadows: [
+              BoxShadow(
+                color: AppValues.primaryColor,
+                spreadRadius: 1,
+                blurRadius: 1,
+                blurStyle: BlurStyle.outer,
+                offset: const Offset(1, 1),
+              ),
+            ]),
+        textAlign: TextAlign.center,
       ),
     );
   }

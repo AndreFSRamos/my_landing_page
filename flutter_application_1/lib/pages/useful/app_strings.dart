@@ -8,7 +8,7 @@ class AppValues {
   static String titleHome = "Hi, I'am André Ramos";
   static String subTitleHome = "Full Stack Developer Jr";
   static String descriptionHome =
-      '" Desenvolvedor de software, atualmente se especializando em aplicações multiplataformas. Sempre costumo buscar uma visão geral dos projetos afim de entender as regras de negócios e suas necessidades. Também estou em constante aprendizado, buscando novas tecnologias. "';
+      'Se especializando em desenvolvimento de sofwares multiplataformas.';
 
   // Text's header.
   static String btHeaderPage01 = "Home";

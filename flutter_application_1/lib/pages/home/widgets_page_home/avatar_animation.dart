@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rive/rive.dart';
 import '../../useful/app_strings.dart';
 
 class AvatarAnimation extends StatelessWidget {
@@ -16,25 +15,13 @@ class AvatarAnimation extends StatelessWidget {
             image: AssetImage(AppValues.imagePerfil), fit: BoxFit.contain),
         boxShadow: [
           BoxShadow(
-            color: AppValues.secondColor,
-            spreadRadius: 0,
-            blurRadius: 0,
-            blurStyle: BlurStyle.outer,
-          ),
+              color: AppValues.secondColor,
+              spreadRadius: -15,
+              blurRadius: 10,
+              blurStyle: BlurStyle.solid,
+              offset: const Offset(0, 40)),
         ],
       ),
-
-      /*child: const RiveAnimation.asset(
-        'images/perfilAnimado2.riv',
-        animations: [
-          'icon_java',
-          'icon_dart',
-          'icon_flutter',
-          'icon_firebase',
-          'icon_mysql',
-          'icon_oracle'
-        ],
-      ),*/
     );
   }
 }

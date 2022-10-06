@@ -24,20 +24,20 @@ class Home extends StatelessWidget {
         ),
         Center(
           child: SizedBox(
-            width: MediaQuery.of(context).size.width * 0.6,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(height: MediaQuery.of(context).size.height * 0.2),
-                const AvatarAnimation(),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-                const TitlePage(),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-                const SubTitlePage(),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-                const DescriptionPage(),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-              ],
+            width: MediaQuery.of(context).size.width * 1,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Column(
+                // mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.2),
+                  const AvatarAnimation(),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+                  const TitlePage(),
+                  const SubTitlePage(),
+                  const DescriptionPage(),
+                ],
+              ),
             ),
           ),
         ),

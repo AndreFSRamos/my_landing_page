@@ -1,6 +1,7 @@
-// ignore_for_file: must_be_immutable
+// ignore_for_file: must_be_immutable, deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/useful/app_strings.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CaseButtonsHeader extends StatelessWidget {
@@ -18,31 +19,39 @@ class CaseButtonsHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
-          height: 40,
-          width: 180,
-          decoration: BoxDecoration(boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.1),
-              spreadRadius: 0,
-              blurRadius: 20,
-              offset: const Offset(0, 2), // changes position of shadow
-            )
-          ]),
-          child: RaisedButton(
-            onPressed: () {
-              setPage(index);
-            },
-            color: const Color.fromARGB(255, 36, 36, 36),
-            hoverColor: const Color.fromARGB(255, 243, 86, 86),
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-            child: Text(
-              text,
-              style: GoogleFonts.rubikGlitch(
-                fontSize: 20,
-                fontWeight: FontWeight.w400,
-                color: Colors.white,
+        ValueListenableBuilder(
+          valueListenable: AppValues.pageSelect,
+          builder: (context, int pageSelect, _) => Container(
+            height: 40,
+            width: 180,
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.1),
+                  spreadRadius: 0,
+                  blurRadius: 20,
+                  offset: const Offset(0, 2),
+                )
+              ],
+            ),
+            child: RaisedButton(
+              onPressed: () {
+                setPage(index);
+                AppValues.setPageSelect(index);
+              },
+              color: pageSelect == index
+                  ? AppValues.primaryColor
+                  : AppValues.secondColor,
+              hoverColor: AppValues.primaryColor,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30)),
+              child: Text(
+                text,
+                style: GoogleFonts.rubikGlitch(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w400,
+                  color: AppValues.treeColor,
+                ),
               ),
             ),
           ),

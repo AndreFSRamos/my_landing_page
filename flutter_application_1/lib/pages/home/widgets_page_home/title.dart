@@ -10,9 +10,18 @@ class TitlePage extends StatelessWidget {
     return Text(
       AppValues.titleHome,
       style: GoogleFonts.roboto(
-        fontSize: 70,
-        fontWeight: FontWeight.w600,
-      ),
+          fontSize: 70,
+          fontWeight: FontWeight.w600,
+          color: AppValues.primaryColor,
+          shadows: [
+            BoxShadow(
+              color: AppValues.secondColor,
+              spreadRadius: 1,
+              blurRadius: 1,
+              blurStyle: BlurStyle.outer,
+              offset: const Offset(3, 7),
+            ),
+          ]),
     );
   }
 }

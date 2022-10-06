@@ -11,7 +11,7 @@ class PageMenu extends StatefulWidget {
   State<PageMenu> createState() => _PageMenu();
 }
 
-class _PageMenu extends State<PageMenu> {
+class _PageMenu extends State<PageMenu> with SingleTickerProviderStateMixin {
   int pageInicial = AppValues.intialPageIndex;
   late PageController controllerPage;
 
@@ -24,9 +24,20 @@ class _PageMenu extends State<PageMenu> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    AnimationController _animationController = AnimationController(
+      vsync: this,
+      duration: Duration(seconds: AppValues.durationAnimationButtomSendEmail),
+    );
+    AppValues.setAnimation(_animationController);
+  }
+
+  @override
   Widget build(BuildContext context) {
     controllerPage = PageController(initialPage: pageInicial);
     return Scaffold(
+      backgroundColor: AppValues.background,
       body: Stack(
         alignment: Alignment.topCenter,
         children: [

@@ -10,7 +10,7 @@ class BasePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey[900],
+      color: Colors.black54,
       height: MediaQuery.of(context).size.height * 0.1,
       child: Padding(
         padding: const EdgeInsets.only(right: 150, left: 50),

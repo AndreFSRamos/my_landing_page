@@ -12,8 +12,9 @@ class DescriptionPage extends StatelessWidget {
       child: Text(
         AppValues.descriptionHome,
         style: GoogleFonts.gruppo(
-          fontSize: 26,
-          fontWeight: FontWeight.w600,
+          fontSize: 30,
+          fontWeight: FontWeight.w900,
+          color: AppValues.treeColor,
         ),
         textAlign: TextAlign.justify,
       ),

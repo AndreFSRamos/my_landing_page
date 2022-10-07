@@ -19,8 +19,9 @@ class StaggerAnimation extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 50),
       child: InkWell(
         onTap: () async {
-          await controller.forward();
-          await controller.reverse();
+          // await controller.forward();
+
+          // await controller.reverse();
         },
         child: Container(
           width: buttomSqueeze.value,
@@ -29,6 +30,10 @@ class StaggerAnimation extends StatelessWidget {
           decoration: BoxDecoration(
             color: AppValues.primaryColor,
             borderRadius: BorderRadius.circular(30),
+            boxShadow: [
+              BoxShadow(
+                  color: AppValues.treeColor, blurRadius: 1, spreadRadius: 2),
+            ],
           ),
           child: _buildInside(context),
         ),
@@ -41,16 +46,17 @@ class StaggerAnimation extends StatelessWidget {
       return Text(
         AppValues.textButtomSendEmail,
         style: const TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-            fontWeight: FontWeight.w300,
-            letterSpacing: 0.3),
+          color: Colors.white,
+          fontSize: 20,
+          fontWeight: FontWeight.w300,
+          letterSpacing: 0.3,
+        ),
       );
     } else {
-      return const Center(
+      return Center(
         child: CircularProgressIndicator(
-          valueColor: AlwaysStoppedAnimation(Colors.white),
-          strokeWidth: 5.0,
+          valueColor: AlwaysStoppedAnimation(AppValues.treeColor),
+          strokeWidth: 3,
         ),
       );
     }

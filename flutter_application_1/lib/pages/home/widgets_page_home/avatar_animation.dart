@@ -18,7 +18,7 @@ class AvatarAnimation extends StatelessWidget {
               color: AppValues.secondColor,
               spreadRadius: -15,
               blurRadius: 10,
-              blurStyle: BlurStyle.solid,
+              //blurStyle: BlurStyle.solid,
               offset: const Offset(0, 40)),
         ],
       ),

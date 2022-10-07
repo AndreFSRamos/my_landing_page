@@ -24,16 +24,7 @@ class CaseButtonsHeader extends StatelessWidget {
           builder: (context, int pageSelect, _) => Container(
             height: 40,
             width: 180,
-            decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.1),
-                  spreadRadius: 0,
-                  blurRadius: 20,
-                  offset: const Offset(0, 2),
-                )
-              ],
-            ),
+            decoration: const BoxDecoration(),
             child: RaisedButton(
               onPressed: () {
                 setPage(index);
@@ -44,10 +35,11 @@ class CaseButtonsHeader extends StatelessWidget {
                   : AppValues.secondColor,
               hoverColor: AppValues.primaryColor,
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30)),
+                borderRadius: BorderRadius.circular(30),
+              ),
               child: Text(
                 text,
-                style: GoogleFonts.rubikGlitch(
+                style: GoogleFonts.roboto(
                   fontSize: 20,
                   fontWeight: FontWeight.w400,
                   color: AppValues.treeColor,

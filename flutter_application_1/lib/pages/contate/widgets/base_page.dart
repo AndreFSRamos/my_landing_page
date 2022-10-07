@@ -10,7 +10,7 @@ class BasePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black54,
+      color: Colors.grey[900],
       height: MediaQuery.of(context).size.height * 0.1,
       child: Padding(
         padding: const EdgeInsets.only(right: 150, left: 50),
@@ -36,15 +36,15 @@ class BasePage extends StatelessWidget {
   Widget _phoneNumber() {
     return Row(
       children: [
-        const Icon(
+        Icon(
           Icons.phone_enabled_sharp,
-          color: Colors.white70,
+          color: AppValues.treeColor,
           size: 30,
         ),
         const SizedBox(width: 10),
         Text(
           AppValues.myPhoneNumber,
-          style: const TextStyle(color: Colors.white70, fontSize: 20),
+          style: TextStyle(color: AppValues.treeColor, fontSize: 20),
         ),
       ],
     );
@@ -53,15 +53,15 @@ class BasePage extends StatelessWidget {
   Widget _email() {
     return Row(
       children: [
-        const Icon(
+        Icon(
           Icons.email_outlined,
-          color: Colors.white70,
+          color: AppValues.treeColor,
           size: 30,
         ),
         const SizedBox(width: 10),
         Text(
           AppValues.myEmail,
-          style: const TextStyle(color: Colors.white70, fontSize: 20),
+          style: TextStyle(color: AppValues.treeColor, fontSize: 20),
         ),
       ],
     );
@@ -95,7 +95,6 @@ class BasePage extends StatelessWidget {
         height: 60,
         width: 60,
         decoration: BoxDecoration(
-          color: Colors.transparent,
           borderRadius: BorderRadius.circular(30),
           image:
               DecorationImage(image: AssetImage(pathIcon), fit: BoxFit.cover),

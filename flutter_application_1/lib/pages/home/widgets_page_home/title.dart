@@ -10,9 +10,9 @@ class TitlePage extends StatelessWidget {
     return Text(
       AppValues.titleHome,
       textAlign: TextAlign.center,
-      style: GoogleFonts.roboto(
+      style: GoogleFonts.kronaOne(
         fontSize: 60,
-        fontWeight: FontWeight.w600,
+        //fontWeight: FontWeight.w600,
         color: AppValues.primaryColor,
         shadows: [
           BoxShadow(

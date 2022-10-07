@@ -60,7 +60,7 @@ class FormEmail extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 30),
           StaggerAnimation(
             controller: AppValues.getAnimation(),
           ),

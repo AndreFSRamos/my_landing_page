@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/contate/widgets/base_page.dart';
 import 'package:flutter_application_1/pages/contate/widgets/bt_whatsapp.dart';
-import 'package:flutter_application_1/pages/contate/widgets/form_email.dart';
+import 'package:flutter_application_1/pages/useful/app_strings.dart';
 
 class Contate extends StatelessWidget {
   const Contate({Key? key}) : super(key: key);
@@ -11,22 +11,28 @@ class Contate extends StatelessWidget {
     return Center(
       child: Stack(
         children: [
+          Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    AppValues.secondColor,
+                    AppValues.primaryColor,
+                  ],
+                  stops: const [
+                    0.5,
+                    0.5,
+                  ]),
+            ),
+          ),
           Stack(
             alignment: Alignment.bottomRight,
             children: [
               Column(
                 children: [
-                  SizedBox(
+                  Container(
                     height: MediaQuery.of(context).size.height * 0.9,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          width: MediaQuery.of(context).size.width * 0.6,
-                          child: const FormEmail(),
-                        ),
-                      ],
-                    ),
                   ),
                   const BasePage(),
                 ],

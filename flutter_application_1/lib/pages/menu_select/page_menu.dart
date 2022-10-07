@@ -37,10 +37,20 @@ class _PageMenu extends State<PageMenu> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     controllerPage = PageController(initialPage: pageInicial);
     return Scaffold(
-      backgroundColor: AppValues.background,
+      backgroundColor: AppValues.secondColor,
       body: Stack(
         alignment: Alignment.topCenter,
         children: [
+          /*  Container(
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.topCenter,
+                  colors: [AppValues.secondColor, AppValues.treeColor]),
+            ),
+          ),*/
           Column(
             children: [
               BodyHome(controllerPage: controllerPage),

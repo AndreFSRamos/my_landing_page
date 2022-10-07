@@ -11,32 +11,29 @@ class Header extends StatelessWidget {
   Function setPage;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 20),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          const Logo(),
-          Container(
-            width: MediaQuery.of(context).size.width * 0.2,
-          ),
-          CaseButtonsHeader(
-            text: AppValues.btHeaderPage01,
-            index: 0,
-            setPage: setPage,
-          ),
-          CaseButtonsHeader(
-            text: AppValues.btHeaderPage02,
-            index: 1,
-            setPage: setPage,
-          ),
-          CaseButtonsHeader(
-            text: AppValues.btHeaderPage03,
-            index: 2,
-            setPage: setPage,
-          ),
-        ],
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        const Logo(),
+        Container(
+          width: MediaQuery.of(context).size.width * 0.2,
+        ),
+        CaseButtonsHeader(
+          text: AppValues.btHeaderPage01,
+          index: 0,
+          setPage: setPage,
+        ),
+        CaseButtonsHeader(
+          text: AppValues.btHeaderPage02,
+          index: 1,
+          setPage: setPage,
+        ),
+        CaseButtonsHeader(
+          text: AppValues.btHeaderPage03,
+          index: 2,
+          setPage: setPage,
+        ),
+      ],
     );
   }
 }

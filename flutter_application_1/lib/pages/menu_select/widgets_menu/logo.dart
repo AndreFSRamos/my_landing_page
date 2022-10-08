@@ -10,7 +10,7 @@ class Logo extends StatelessWidget {
     return Text(
       AppValues.logo,
       style: GoogleFonts.monoton(
-        fontSize: 60,
+        fontSize: MediaQuery.of(context).size.height * 0.04,
         color: AppValues.primaryColor,
       ),
     );

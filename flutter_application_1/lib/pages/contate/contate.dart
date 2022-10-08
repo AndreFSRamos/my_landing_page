@@ -4,16 +4,20 @@ import 'package:flutter_application_1/pages/contate/widgets/bt_whatsapp.dart';
 import 'package:flutter_application_1/pages/useful/app_strings.dart';
 
 class Contate extends StatelessWidget {
-  const Contate({Key? key}) : super(key: key);
-
+  const Contate({Key? key, required this.index}) : super(key: key);
+  final GlobalKey index;
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Stack(
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
+      key: index,
+      child: SizedBox(
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        child: Stack(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
@@ -23,25 +27,27 @@ class Contate extends StatelessWidget {
                   stops: const [
                     0.5,
                     0.5,
-                  ]),
-            ),
-          ),
-          Stack(
-            alignment: Alignment.bottomRight,
-            children: [
-              Column(
-                children: [
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.9,
-                  ),
-                  const BasePage(),
-                ],
+                  ],
+                ),
               ),
-            ],
-          ),
-          const ButtomWhatsapp(),
-        ],
-        alignment: Alignment.bottomRight,
+            ),
+            Stack(
+              alignment: Alignment.bottomRight,
+              children: [
+                Column(
+                  children: [
+                    Container(
+                      height: MediaQuery.of(context).size.height * 0.9,
+                    ),
+                    const BasePage(),
+                  ],
+                ),
+              ],
+            ),
+            const ButtomWhatsapp(),
+          ],
+          alignment: Alignment.bottomRight,
+        ),
       ),
     );
   }

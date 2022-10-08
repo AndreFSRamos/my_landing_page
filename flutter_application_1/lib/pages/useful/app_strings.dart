@@ -12,8 +12,9 @@ class AppValues {
 
   // Text's header.
   static String btHeaderPage01 = "Home";
-  static String btHeaderPage02 = "Projects";
-  static String btHeaderPage03 = "Contate";
+  static String btHeaderPage02 = "About me";
+  static String btHeaderPage03 = "Projects";
+  static String btHeaderPage04 = "Contate";
 
   // Text page Contate
   static String textButtomSendEmail = "Enviar email";
@@ -50,7 +51,7 @@ class AppValues {
   //============== C O N T R O L L E R ' S ====================================================================================================================================
 
   //Controller Animation Buttom Send Email.
-  static late AnimationController _animationController;
+  /*static late AnimationController _animationController;
 
   static setAnimation(AnimationController controller) {
     _animationController = controller;
@@ -58,21 +59,21 @@ class AppValues {
 
   static getAnimation() {
     return _animationController;
-  }
+  }*/
 
   //Index initial page values.
-  static int intialPageIndex = 0;
+  //static int intialPageIndex = 0;
 
   // Transition animation duration value between pages (Miliseconds)
   static int durationTransition = 500;
 
   //Duration time animation buttom "Send Email" (Durantion in Seconds).
-  static int durationAnimationButtomSendEmail = 1;
+  //static int durationAnimationButtomSendEmail = 1;
 
-  static ValueNotifier<int> pageSelect = ValueNotifier(0);
+  /*static ValueNotifier<int> pageSelect = ValueNotifier(0);
   static setPageSelect(int page) {
     pageSelect.value = page;
-  }
+  }*/
 
   // =========================== C O L O R S     S I S T E M A ===============================================================================================================
 

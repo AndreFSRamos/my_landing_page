@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/useful/app_strings.dart';
 
-import '../useful/app_strings.dart';
-
-class Projects extends StatelessWidget {
-  const Projects({Key? key, required this.index}) : super(key: key);
+class AboutMe extends StatelessWidget {
+  const AboutMe({Key? key, required this.index}) : super(key: key);
   final GlobalKey index;
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,7 @@ class Projects extends StatelessWidget {
                   Colors.grey,
                   AppValues.secondColor,
                 ],
-                stops: const [0.5, 0.5],
+                stops: const [0.3, 0.3],
               ),
             ),
           ),
@@ -31,7 +30,7 @@ class Projects extends StatelessWidget {
               gradient: LinearGradient(
                 end: Alignment.bottomLeft,
                 begin: Alignment.topRight,
-                colors: [AppValues.secondColor, AppValues.secondColor],
+                colors: [AppValues.primaryColor, AppValues.secondColor],
                 stops: const [0.1, 0.1],
               ),
             ),

@@ -17,7 +17,9 @@ class CaseButtonsHeader extends StatelessWidget {
   Function setPage;
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Container();
+
+    /*Row(
       children: [
         ValueListenableBuilder(
           valueListenable: AppValues.pageSelect,
@@ -49,6 +51,6 @@ class CaseButtonsHeader extends StatelessWidget {
           ),
         ),
       ],
-    );
+    );*/
   }
 }

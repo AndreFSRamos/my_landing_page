@@ -2,7 +2,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/menu_select/widgets_menu/body.dart';
 import 'package:flutter_application_1/pages/menu_select/widgets_menu/header.dart';
+import 'package:flutter_application_1/pages/menu_select/widgets_menu/logo.dart';
 import 'package:flutter_application_1/pages/useful/app_strings.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import '../about/about_me.dart';
+import '../contate/contate.dart';
+import '../home/home.dart';
+import '../projects/projects.dart';
 
 class PageMenu extends StatefulWidget {
   const PageMenu({Key? key}) : super(key: key);
@@ -12,58 +19,95 @@ class PageMenu extends StatefulWidget {
 }
 
 class _PageMenu extends State<PageMenu> with SingleTickerProviderStateMixin {
-  int pageInicial = AppValues.intialPageIndex;
-  late PageController controllerPage;
-
-  _setPage(int indexPage) {
-    setState(() {
-      controllerPage.animateToPage(indexPage,
-          duration: Duration(milliseconds: AppValues.durationTransition),
-          curve: Curves.ease);
-    });
-  }
+  late ScrollController _scrollController;
+  BuildContext? tabContext;
+  final List<GlobalKey> pages = [
+    GlobalKey(),
+    GlobalKey(),
+    GlobalKey(),
+    GlobalKey()
+  ];
 
   @override
   void initState() {
+    _scrollController = ScrollController();
+    _scrollController.addListener(_changeTabs);
     super.initState();
-    AnimationController _animationController = AnimationController(
-      vsync: this,
-      duration: Duration(seconds: AppValues.durationAnimationButtomSendEmail),
+  }
+
+  _changeTabs() {
+    setState(() {
+      late RenderBox box;
+      for (var i = 0; i < pages.length; i++) {
+        box = pages[i].currentContext!.findRenderObject() as RenderBox;
+        print('test2');
+        Offset position = box.localToGlobal(Offset.zero);
+
+        if (_scrollController.offset >= position.dy) {
+          DefaultTabController.of(tabContext!)!.animateTo(i,
+              duration: const Duration(milliseconds: 100), curve: Curves.ease);
+          print('teste');
+        }
+      }
+    });
+  }
+
+  _scrollContextPage(int index) async {
+    _scrollController.removeListener(_changeTabs);
+    final page = pages[index].currentContext!;
+    await Scrollable.ensureVisible(page,
+        duration: Duration(milliseconds: AppValues.durationTransition),
+        curve: Curves.ease);
+    _scrollController.addListener(_changeTabs);
+  }
+
+  _caseText(String text) {
+    return Text(
+      text,
+      style: GoogleFonts.roboto(fontSize: 20, color: AppValues.treeColor),
     );
-    AppValues.setAnimation(_animationController);
   }
 
   @override
   Widget build(BuildContext context) {
-    controllerPage = PageController(initialPage: pageInicial);
-    return Scaffold(
-      backgroundColor: AppValues.secondColor,
-      body: Stack(
-        alignment: Alignment.topCenter,
-        children: [
-          /*  Container(
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.topCenter,
-                  colors: [AppValues.secondColor, AppValues.treeColor]),
+    return DefaultTabController(
+      length: 4,
+      child: Builder(
+        builder: (context) {
+          tabContext = context;
+          return Scaffold(
+            appBar: AppBar(
+              backgroundColor: AppValues.secondColor,
+              title: Header(
+                setPage: _scrollContextPage,
+              ),
             ),
-          ),*/
-          Column(
-            children: [
-              BodyHome(controllerPage: controllerPage),
-            ],
-          ),
-          SizedBox(
-            height: 90,
-            child: Header(
-              setPage: _setPage,
-            ),
-          )
-        ],
+            body: BodyHome(scrollController: _scrollController, pages: pages),
+          );
+        },
       ),
     );
+    /*return DefaultTabController(
+      length: 4,
+      child: Scaffold(
+        backgroundColor: Colors.black,
+        body: CustomScrollView(
+          slivers: [
+            SliverAppBar(
+              floating: true,
+              elevation: 0,
+              snap: true,
+              backgroundColor: AppValues.secondColor,
+              toolbarHeight: MediaQuery.of(context).size.height * 0.09,
+              flexibleSpace: FlexibleSpaceBar(
+                title: Header(setPage: _setPage),
+                centerTitle: true,
+              ),
+            ),
+            BodyHome(controllerPage: controllerPage)
+          ],
+        ),
+      ),
+    );*/
   }
 }

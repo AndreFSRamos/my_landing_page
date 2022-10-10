@@ -18,7 +18,6 @@ class Home extends StatelessWidget {
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
       child: Stack(
-        alignment: Alignment.bottomRight,
         children: [
           Container(
             decoration: BoxDecoration(
@@ -45,20 +44,28 @@ class Home extends StatelessWidget {
           ),
           SizedBox(
             width: MediaQuery.of(context).size.width,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.2),
-                  //const AvatarAnimation(),
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.1),
-                  const TitlePage(),
-                  const SubTitlePage(),
-                  const DescriptionPage(),
-                ],
-              ),
+            height: MediaQuery.of(context).size.height,
+            child: Row(
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.6,
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 30),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        TitlePage(),
+                        SubTitlePage(),
+                        DescriptionPage(),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.3,
+                    child: const AvatarAnimation()),
+              ],
             ),
           ),
         ],

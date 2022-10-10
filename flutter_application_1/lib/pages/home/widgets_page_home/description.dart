@@ -15,15 +15,6 @@ class DescriptionPage extends StatelessWidget {
           fontSize: 20,
           fontWeight: FontWeight.w600,
           color: AppValues.treeColor,
-          shadows: [
-            BoxShadow(
-              color: AppValues.primaryColor,
-              spreadRadius: 1,
-              blurRadius: 1,
-              blurStyle: BlurStyle.outer,
-              offset: const Offset(1, 1),
-            ),
-          ],
         ),
         textAlign: TextAlign.center,
       ),

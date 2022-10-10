@@ -33,7 +33,7 @@ class AppValues {
 
   //path assets.
   static String imageBackground = "images/florestVetorBlack.jpg";
-  static String imagePerfil = "images/perfil10.png";
+  static String imagePerfil = "images/perfil6.png";
   static String iconIn = "images/icon_in.png";
   static String iconGitHub = "images/icon_gitHub.png";
   static String iconFacebook = "images/icon_facebook.png";

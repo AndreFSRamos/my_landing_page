@@ -14,15 +14,6 @@ class SubTitlePage extends StatelessWidget {
         fontSize: 30,
         fontWeight: FontWeight.w600,
         color: AppValues.treeColor,
-        shadows: [
-          BoxShadow(
-            color: AppValues.primaryColor,
-            spreadRadius: 1,
-            blurRadius: 1,
-            blurStyle: BlurStyle.solid,
-            offset: const Offset(2, 2),
-          ),
-        ],
       ),
     );
   }

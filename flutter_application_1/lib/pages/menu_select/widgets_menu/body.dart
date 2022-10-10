@@ -30,19 +30,5 @@ class BodyHome extends StatelessWidget {
         ],
       ),
     );
-
-    /*Flexible(
-      child: PageView(
-        scrollBehavior: const ScrollBehavior(),
-        controller: controllerPage,
-        pageSnapping: false,
-        scrollDirection: Axis.vertical,
-        children: const [
-          Home(),
-          Projects(),
-          Contate(),
-        ],
-      ),
-    );*/
   }
 }

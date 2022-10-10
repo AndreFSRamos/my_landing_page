@@ -12,17 +12,7 @@ class TitlePage extends StatelessWidget {
       textAlign: TextAlign.center,
       style: GoogleFonts.kronaOne(
         fontSize: 60,
-        //fontWeight: FontWeight.w600,
         color: AppValues.primaryColor,
-        shadows: [
-          BoxShadow(
-            color: AppValues.secondColor,
-            spreadRadius: 1,
-            blurRadius: 1,
-            blurStyle: BlurStyle.outer,
-            offset: const Offset(1, 1),
-          ),
-        ],
       ),
     );
   }

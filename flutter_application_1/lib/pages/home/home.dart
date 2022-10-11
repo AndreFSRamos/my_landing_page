@@ -5,7 +5,7 @@ import 'package:flutter_application_1/pages/home/widgets_page_home/avatar_animat
 import 'package:flutter_application_1/pages/home/widgets_page_home/description.dart';
 import 'package:flutter_application_1/pages/home/widgets_page_home/sub_title.dart';
 import 'package:flutter_application_1/pages/home/widgets_page_home/title.dart';
-import '../useful/app_strings.dart';
+import '../../useful/app_strings.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key, required this.index}) : super(key: key);
@@ -43,16 +43,14 @@ class Home extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
             child: Row(
               children: [
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.6,
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 30),
+                    padding: const EdgeInsets.only(left: 100),
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const [
                         TitlePage(),
@@ -63,8 +61,9 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.3,
-                    child: const AvatarAnimation()),
+                  width: MediaQuery.of(context).size.width * 0.3,
+                  child: const AvatarAnimation(),
+                ),
               ],
             ),
           ),

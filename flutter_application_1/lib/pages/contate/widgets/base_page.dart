@@ -1,8 +1,8 @@
 // ignore_for_file: avoid_web_libraries_in_flutter
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/useful/app_strings.dart';
 import 'dart:html' as html;
+import '../../../useful/app_strings.dart';
 
 class BasePage extends StatelessWidget {
   const BasePage({Key? key}) : super(key: key);

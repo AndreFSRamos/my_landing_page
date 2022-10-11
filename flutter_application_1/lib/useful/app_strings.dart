@@ -16,6 +16,13 @@ class AppValues {
   static String btHeaderPage03 = "Projects";
   static String btHeaderPage04 = "Contate";
 
+  // Text's Page About me
+  static String textAboutMe =
+      ' " Desenvolvedor de software, atualmente se especializando em aplicação mobile e hibridas, costumo buscar uma visão geral dos projetos afim de entender as regras de negócios e também estou em constante aprendizado, buscando novas tecnologias. "';
+  static String diretoryCv = "assets/doc/cv_andre_ramos.pdf";
+  static String nameFileCv = "cv_andre_ramos";
+  static String bottomDownloadCv = "Download CV";
+
   // Text page Contate
   static String textButtomSendEmail = "Enviar email";
   static String textHintEmail = "Informe seu email.";
@@ -34,6 +41,7 @@ class AppValues {
   //path assets.
   static String imageBackground = "images/florestVetorBlack.jpg";
   static String imagePerfil = "images/perfil6.png";
+  static String imageAboutMe = "images/eu2.png";
   static String iconIn = "images/icon_in.png";
   static String iconGitHub = "images/icon_gitHub.png";
   static String iconFacebook = "images/icon_facebook.png";
@@ -50,30 +58,11 @@ class AppValues {
 
   //============== C O N T R O L L E R ' S ====================================================================================================================================
 
-  //Controller Animation Buttom Send Email.
-  /*static late AnimationController _animationController;
-
-  static setAnimation(AnimationController controller) {
-    _animationController = controller;
-  }
-
-  static getAnimation() {
-    return _animationController;
-  }*/
-
-  //Index initial page values.
-  //static int intialPageIndex = 0;
-
-  // Transition animation duration value between pages (Miliseconds)
   static int durationTransition = 500;
-
-  //Duration time animation buttom "Send Email" (Durantion in Seconds).
-  //static int durationAnimationButtomSendEmail = 1;
-
-  /*static ValueNotifier<int> pageSelect = ValueNotifier(0);
+  static ValueNotifier<int> pageSelect = ValueNotifier(0);
   static setPageSelect(int page) {
     pageSelect.value = page;
-  }*/
+  }
 
   // =========================== C O L O R S     S I S T E M A ===============================================================================================================
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/useful/app_strings.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../../useful/app_strings.dart';
 
 class Logo extends StatelessWidget {
   const Logo({Key? key}) : super(key: key);

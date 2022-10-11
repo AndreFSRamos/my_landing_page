@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../useful/app_strings.dart';
 
-class Projects extends StatelessWidget {
-  const Projects({Key? key, required this.index}) : super(key: key);
+class PageSkills extends StatelessWidget {
+  const PageSkills({Key? key, required this.index}) : super(key: key);
   final GlobalKey index;
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class Projects extends StatelessWidget {
                   Colors.grey,
                   AppValues.secondColor,
                 ],
-                stops: const [0.9, 0.9],
+                stops: const [0.5, 0.5],
               ),
             ),
           ),
@@ -31,14 +31,17 @@ class Projects extends StatelessWidget {
               gradient: LinearGradient(
                 end: Alignment.bottomLeft,
                 begin: Alignment.topRight,
-                colors: [AppValues.secondColor, AppValues.secondColor],
+                colors: [
+                  AppValues.secondColor,
+                  AppValues.secondColor,
+                ],
                 stops: const [0.1, 0.1],
               ),
             ),
           ),
           const Center(
             child: Text(
-              'Projetos',
+              'Habilidades',
               style: TextStyle(fontSize: 30, color: Colors.white),
             ),
           ),

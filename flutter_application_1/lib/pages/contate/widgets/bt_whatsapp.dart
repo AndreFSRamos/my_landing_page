@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'dart:html' as html;
-import '../../useful/app_strings.dart';
+import '../../../useful/app_strings.dart';
 
 class ButtomWhatsapp extends StatelessWidget {
   const ButtomWhatsapp({Key? key}) : super(key: key);

@@ -1,7 +1,6 @@
 // ignore_for_file: deprecated_member_use
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/contate/widgets/stagger_animation.dart';
-import 'package:flutter_application_1/pages/useful/app_strings.dart';
+import '../../../useful/app_strings.dart';
 
 class FormEmail extends StatelessWidget {
   const FormEmail({Key? key}) : super(key: key);

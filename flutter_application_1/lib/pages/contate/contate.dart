@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/contate/widgets/base_page.dart';
 import 'package:flutter_application_1/pages/contate/widgets/bt_whatsapp.dart';
-import 'package:flutter_application_1/pages/useful/app_strings.dart';
+
+import '../../useful/app_strings.dart';
 
 class Contate extends StatelessWidget {
   const Contate({Key? key, required this.index}) : super(key: key);

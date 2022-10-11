@@ -2,7 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/menu_select/widgets_menu/body.dart';
 import 'package:flutter_application_1/pages/menu_select/widgets_menu/header.dart';
-import 'package:flutter_application_1/pages/useful/app_strings.dart';
+
+import '../../useful/app_strings.dart';
 
 class PageMenu extends StatefulWidget {
   const PageMenu({Key? key}) : super(key: key);
@@ -18,7 +19,9 @@ class _PageMenu extends State<PageMenu> with SingleTickerProviderStateMixin {
     GlobalKey(),
     GlobalKey(),
     GlobalKey(),
-    GlobalKey()
+    GlobalKey(),
+    GlobalKey(),
+    GlobalKey(),
   ];
 
   @override
@@ -36,7 +39,7 @@ class _PageMenu extends State<PageMenu> with SingleTickerProviderStateMixin {
 
         Offset position = box.localToGlobal(Offset.zero);
 
-        if (_scrollController.offset >= position.dy) {
+        if (_scrollController.offset / 4.5 > position.dy) {
           DefaultTabController.of(tabContext!)!.animateTo(i,
               duration: const Duration(milliseconds: 100), curve: Curves.ease);
         }
@@ -56,16 +59,15 @@ class _PageMenu extends State<PageMenu> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4,
+      length: 6,
       child: Builder(
         builder: (context) {
           tabContext = context;
           return Scaffold(
+            backgroundColor: Colors.grey[900],
             appBar: AppBar(
               backgroundColor: AppValues.secondColor,
-              title: Header(
-                setPage: _scrollContextPage,
-              ),
+              title: Header(scrollPage: _scrollContextPage),
             ),
             body: BodyHome(scrollController: _scrollController, pages: pages),
           );
